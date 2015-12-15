@@ -67,8 +67,30 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
 p {
   font-size: .9em;
+}
+
+.large {
+  font-size: 125%;
+}
+
+.header {
+  min-height: 100px;
+  background: #e7313b;
+  margin: 0 0 50px 0;
+}
+
+.logo {
+  padding: 5px 0 0;
+  margin: auto;
+  max-width: 1120px
 }
 
 .dashboard {
@@ -111,28 +133,41 @@ p {
   border-top: #f1f1f1 2px solid;
 }
 
+.intro ul {
+  font-size: .9em;
+  list-style-type: none;
+  padding: 0;
+}
+
 .tag {
   color: #FFF;
   font-size: 90%;
   font-style: italic;
-  padding: 5px;
-  margin: 5px;
+  padding: 5px 15px;
+  margin: -10px -20px;
 }
-
 .about {
-  width: 70%;
+  margin: 10px 10px 10px 0;
+  width: 65%;
 }
 .data {
+  background: #f1f1f1;
+  margin: 70px 0 20px;
+  padding: 10px 20px 10px 20px;
   width: 30%;
 }
 
+.data ul {
+  font-size: .9em;
+  list-style-type: none;
+  padding: 0;
+}
 
-
-
-
-
-
-
+footer {
+  min-height: 200px;
+  border-top: 2px #f1f1f1 solid;
+  margin: 25px 0 0;
+}
 
 
 
