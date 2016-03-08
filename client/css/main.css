@@ -169,7 +169,10 @@ footer {
   margin: 25px 0 0;
 }
 
-
+.loadingSpan {
+    background: #eff1f1 none repeat scroll 0 0;
+    text-align: center;
+}
 
 
 /* ==========================================================================
