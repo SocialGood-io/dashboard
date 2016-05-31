@@ -1,40 +1,40 @@
 ProjectsList=React.createClass({
 	mixins:[ReactMeteorData],
-	getMeteorData: function(){	
+	getMeteorData: function(){
 		var projectSub = Meteor.subscribe('projects');
 			var data = {
 			    phases: "",
 			    projects: "",
 			    projectsLoaded: FlowRouter.subsReady(),
-			    currentPhase:this.props.phaseAlias?this.props.phaseAlias:"" 
-			  };	
+			    currentPhase:this.props.phaseAlias?this.props.phaseAlias:""
+			  };
 
-		if (data.projectsLoaded) {	
+		if (data.projectsLoaded) {
 			let phasesData 	= 	ProjectPhases.find().fetch()
 			data.phases  	=	_.indexBy(phasesData,'_id');
 			if(data.currentPhase){
-				let pid=_.find(data.phases, function(phase) { return phase.alias == data.currentPhase })					
-				data.projects= Projects.find({phaseId:pid._id}).fetch()	
+				let pid=_.find(data.phases, function(phase) { return phase.alias == data.currentPhase })
+				data.projects= Projects.find({phaseId:pid._id}).fetch()
 			}
-			else{			
+			else{
 				data.projects= Projects.find().fetch()
 			}
-		}	
+		}
 	return data;
 	},
 	getItems:function(items){
 		let itemsLength = items.length-1;
-		return (items.map(function(item,index){	
+		return (items.map(function(item,index){
 			return <span key={index}><a href={item.link}>{item.name}</a>{(index < itemsLength)?", ":""}</span>
 		})
 		)
-	},	
+	},
 	render: function () {
 		if (!this.data.projectsLoaded) {
 	      return <div />;
 	    }
 		that=this;
-		return (<div>			 		
+		return (<div>
 					{this.data.projects.map(function(project){
 						return (<div key={project._id}>
 									<div className="clear"></div>
@@ -50,7 +50,6 @@ ProjectsList=React.createClass({
 							              <li><strong>Partners: </strong>{that.getItems(project.partners)}</li>
 							              <li><strong>Technical Providers: </strong>{that.getItems(project.technical_providers)}</li>
 							              <li><strong>Technology Solution: </strong> {project.technology_solution}</li>
-							              <li><strong>Direct Beneficiaries: </strong>{project.direct_beneficiaries}</li>
 							            </ul>
 							          </div>
 							        </div>
@@ -59,7 +58,6 @@ ProjectsList=React.createClass({
 						})
 					}
 				</div>
-			)		
+			)
 	}
 });
-
