@@ -1,0 +1,303 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+p {
+  font-size: .9em;
+}
+
+.large {
+  font-size: 125%;
+}
+
+.header {
+  min-height: 100px;
+  background: #e7313b;
+  margin: 0 0 50px 0;
+}
+
+.logo {
+  padding: 5px 0 0;
+  margin: auto;
+  max-width: 1120px
+}
+
+.dashboard {
+  margin: auto;
+  max-width: 1120px
+}
+.dashbox {
+  color: #FFF;
+  float: left;
+  padding: 5px 20px;
+  margin: 10px;
+  max-width: 164px;
+  text-align: center;
+}
+.dashbox a{
+  color: #FFF;
+}
+.gray {
+  background: #f1f1f1 !important;
+}
+.yellow {
+  background: #B6B907 !important;
+}
+.blue {
+  background: #446CB3 !important;
+}
+.green {
+  background: #16A085 !important;
+}
+.orange{
+  background: #F2784B !important;
+}
+.pink {
+  background: #D2527F !important;
+}
+
+.explainer {
+  padding: 5px 20px 20px 20px;
+  margin: 20px;
+  border-top: #f1f1f1 2px solid;
+}
+
+.intro ul {
+  font-size: .9em;
+  list-style-type: none;
+  padding: 0;
+}
+
+.tag {
+  color: #FFF;
+  font-size: 90%;
+  font-style: italic;
+  padding: 5px 15px;
+  margin: -10px -20px;
+}
+.about {
+  margin: 10px 10px 10px 0;
+  width: 65%;
+}
+.data {
+  background: #f1f1f1;
+  margin: 70px 0 20px;
+  padding: 10px 20px 10px 20px;
+  width: 30%;
+}
+
+.data ul {
+  font-size: .9em;
+  list-style-type: none;
+  padding: 0;
+}
+
+footer {
+  min-height: 200px;
+  border-top: 2px #f1f1f1 solid;
+  margin: 25px 0 0;
+}
+
+.loadingSpan {
+    background: #eff1f1 none repeat scroll 0 0;
+    text-align: center;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

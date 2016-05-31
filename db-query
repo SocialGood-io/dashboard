@@ -1,0 +1,329 @@
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Technology for Education Systems Transformation",
+description : "This project funds the development of a digital literacy assessment tool for the Total Reading Approach for Children (TRAC) project's Continuous Assessment System (CAS).  The assessment app will promote teacher understanding and use of the CAS as a diagnostic tool for student learning. The CAS App will also facilitate teacher and student use and understanding of technology in the classroom.",
+grantee : [{name:"World Education",link:"http://cambodia.worlded.org"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"CamMob",link:"http://www.cam-mob.com"}],
+technology_solution : "Android-based Learning Tools",
+direct_beneficiaries : "2,782",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "2me9NEcHFHdAEXmmH",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Content Development for Baby Village Care",
+description : "This project funds the development of a mobile phone-based Interactive Voice Response (IVR) tool to bring pre-recorded messages about maternal and child care directly to pregnant women and new mothers through curated voice-messages. ",
+grantee : [{name:"PIN Cambodia",link:"https://www.clovekvtisni.cz/en/humanitary-aid/country/cambodia"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"},{name:"17 Triggers",link:"http://17triggers.com"}],
+technical_providers : [{name:"InSTEDD",link:"http://instedd.org"}],
+technology_solution : "Interactive Voice Response (IVR) System for maternal & child care messages.",
+direct_beneficiaries : "36,000",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "2me9NEcHFHdAEXmmH",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "The Path to Khmer OCR",
+description : "A research project with Open Institute to define the priorities, the strategy, the tools and the work that needs to be done to achieve high quality Optical Character Recognition (OCR) technology for Khmer. OCR technology would enable indexation of large amounts of information in Khmer language and make scanned documents searchable.",
+grantee : [{name:"Open Institute",link:"http://www.open.org.kh/ "}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"",link:""}],
+technology_solution : "Research paper on Optical Character Recognition (OCR) technology on Khmer language.",
+direct_beneficiaries : "0",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "2me9NEcHFHdAEXmmH",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Khmer Smart Keyboard Application",
+description : "This project focuses on the development of a mobile application by social enterprise ALiEN DEV to improve speed of typing in Khmer script. The app allows more Cambodians to communicate via mobile phones in their native language.",
+grantee : [{name:"ALiEN DEV",link:"http://www.alien-dev.com/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"},{name:"Ezecom",link:"http://www.ezecom.com.kh/"},{name:"Cellcard",link:"http://www.cellcard.com.kh/"},{name:"Wing",link:"http://www.wingmoney.com/"},{name:"MyTeb",link:"http://www.mytebtech.com/index.html"},{name:"Sabay",link:"http://sabay.com/"}],
+technical_providers : [{name:"ALiEN DEV",link:"http://www.alien-dev.com/"}],
+technology_solution : "Khmer Keyboard for Android smartphones",
+direct_beneficiaries : "95,000",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "2me9NEcHFHdAEXmmH",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Secured Heritage Project",
+description : "The project funds a safe and reliable digital storage solution for DC-Cam’s digital archive of historical materials. The archive includes photos (20,000 historical photos & 157,000 field trip photos), videos (108 Khmer Rouge regime videos & 318 interview videos with Khmer Rouge cadres & survivors), audio (4,499 interview audio with Khmer Rouge cadres & survivors) and written documentation (14,567 documents equal to a total of 100,503 pages) from the Khmer Rouge period.",
+grantee : [{name:"DC-Cam",link:"http://www.dccam.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"},{name:"Ezecom",link:"http://www.ezecom.com.kh/"}],
+technical_providers : [{name:"Ezecom",link:"http://www.ezecom.com.kh/"}],
+technology_solution : "Secured server to store and preserve Khmer Rouge documentations.",
+direct_beneficiaries : "46s",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "2me9NEcHFHdAEXmmH",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Human Rights Platform Development and Land Rights Awareness Campaign",
+description : "This project will fund CCHR to improve the existing web platform sithihub.net to make it more user friendly and develop content for a land rights awareness campaign using this platform, social media and various communication channels.",
+grantee : [{name:"CCHR",link:"http://www.cchrcambodia.org"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"Endorphine Concept Digital Solutions",link:"http://endorphine-concept.com"}],
+technology_solution : "Content development including videos & infographics on Land rights",
+direct_beneficiaries : "200",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "jKA9bWFvexgYk4Kkc",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Enhancing Citizens Access to Information Through Mobile Technology",
+description : "This project will test a tool to make public service prices more available through interactive voice response technology (IVR), which enabled access to audio information files offline without incurring data charges. Initially, it will make available the prices of public services and then expand over time to provide additional information based on citizen priorities.",
+grantee : [{name:"API",link:"http://www.apiinstitute.org"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"Open Institute",link:"http://www.open.org.kh"}],
+technology_solution : "Interactive Voice Response (IVR) system & mobile app to provide transparent public services' procedures & fees",
+direct_beneficiaries : "600",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "jKA9bWFvexgYk4Kkc",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Citizen News Wire",
+description : "This project will support Citizen Journalists (CJs) to collect, report, and track local issues and increases coverage of these issues by providing direct access to reports and CJs to local and international media and NGOs who will verify and include information in their broad-reaching reporting.",
+grantee : [{name:"CCIM",link:"http://www.ccimcambodia.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"Open Institute",link:"http://www.open.org.kh"}],
+technology_solution : "Mobile app as a platform for concerned citizen journalists to report news on the field",
+direct_beneficiaries : "85",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "jKA9bWFvexgYk4Kkc",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "TosFUND",
+description : "This project will fund the development of TosFund, meaning Let's Fund in Khmer, an online fundraising and crowdfunding platform for Cambodia. The funding tool will build campaigning capacities for development initiatives (especially for Cambodian CSOs), provide practical payment outlets for civic fundraising efforts, and help test online fundraising tools through Cambodia-based payment systems.",
+grantee : [{name:"Action IEC",link:"http://www.actioniec.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"},{name:"Cellcard",link:"http://www.cellcard.com.kh/"},{name:"Wing",link:"http://www.wingmoney.com/"},{name:"Acleda Bank",link:"http://www.acledabank.com.kh/"}],
+technical_providers : [{name:"ALiEN DEV",link:"http://www.alien-dev.com/"}],
+technology_solution : "Crowdfunding Platform for fundraising social initiatives.",
+direct_beneficiaries : "9015",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "jKA9bWFvexgYk4Kkc",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Tracking and Sharing Multi-Sector Issues with Technology (TRANSMIT)",
+description : "This project will fund a platform to track citizen issues and government response online, and test the development of a digital tool to track and share information about citizens' priorities at the commune level.",
+grantee : [{name:"PACT Cambodia",link:"http://www.pactcambodia.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"},{name:"AMARA",link:""},{name:"Village Support Group",link:""},{name:"Anakut Kumar",link:""},{name:"Phnom Srey Org,link:"https://psadcambodia.wordpress.com/contact-us/"},{name:"My Village,link:""}],
+technical_providers : [{name:"Open Institute",link:"http://www.open.org.kh"}],
+technology_solution : "Mobile app for issue tracking at local government level.",
+direct_beneficiaries : "112",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "jKA9bWFvexgYk4Kkc",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "CamboSearch",
+description : "This project funds Rotati Consulting to create CamboSearch.org, a go-to online directory and resource where organizations can search for and find relevant technology and service companies that can produce technology (i.e. websites, apps, databases), create content and conduct training that civil society organizations need to utilize technology to address development challenges.",
+grantee : [{name:"Rotati Consulting",link:"http://www.rotati.com/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"Rotati Consulting",link:"http://www.rotati.com/"}],
+technology_solution : "Online Directory of tech service providers catering for CSO community",
+direct_beneficiaries : "90",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "2me9NEcHFHdAEXmmH",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Digital Data Collection and Visualization for M&E",
+description : "This grant will support CCC’s implementation of the Digital Data Collection and Visualization for M&E project. This program was developed to design and pilot a replicable and sustainable Digital M&E Support Package that equips organizations with the ability to efficiently collect, manage, and conduct basic visualization of M&E data with mobile and cloud-based data management systems. ",
+grantee : [{name:"CCC",link:"http://www.ccc-cambodia.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"WEBIT Solution",link:"http://webits.asia"}],
+technology_solution : "Digital Monitoring & Evaluation (M&E) app and support package",
+direct_beneficiaries : "51",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "Tpp9YacGLefSwXPDt",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Improving Community Engagement and Creating Responsive Radio Content Through Digital Tools",
+description : "The project will fund the update of a paper-based citizen concern system to promote mobile reporting. The reporting tool will provide faster feedback about interventions and updates and allow MEDIA One to integrate community concerns and questions their radio show topics according to citizen input in near real-time.",
+grantee : [{name:"Media One",link:"http://www.mediaone.org.kh/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"Equal Access International",link:"http://www.equalaccess.org/"}],
+technology_solution : "Mobile data collection tools & multimedia for Supporting Forestry & Biodiversity (SFB) project.",
+direct_beneficiaries : "82",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "jKA9bWFvexgYk4Kkc",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "My Tree of Life ( MyToL)",
+description : "This project funds the improvement of an online mental health information and virtual counseling resource for young people through Facebook's Free Basics platform. The main format for the My Tree of Life (MyTOL) website includes mental health information postings and discussions, and online Q&A sessions.",
+grantee : [{name:"Human Development Research Cambodia",link:"http://hdrcambodia.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"},name:"Facebook",link:"https://info.internet.org/en/story/free-basics-from-internet-org/"}],
+technical_providers : [{name:"WEBIT Solution",link:"http://webits.asia"}],
+technology_solution : "Web portal on mental health",
+direct_beneficiaries : "100",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "Tpp9YacGLefSwXPDt",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Promoting Inclusive Education Through a Simple, Collaborative Web Portal for Teachers and Local Authorities",
+description : "This project funds a website to provide educational resources for teachers, school directors, District and Provincial offices of Education (PoE/DoE) and parents. Through Facebook's Free Basics platform, the site aims to reach marginalized and out of school children, and connect them to online resources and school-based resources.",
+grantee : [{name:"Aids Et Action Cambodia",link:"http://seac.aide-et-action.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"},{name:"Facebook",link:"https://info.internet.org/en/story/free-basics-from-internet-org/"}],
+technical_providers : [{name:"BizSolution",link:"http://www.bizsolution.biz/"}],
+technology_solution : "Inclusive education website and a web portal on Facebook's Free Basics platform",
+direct_beneficiaries : "3000",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "Tpp9YacGLefSwXPDt",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Open Source Child Care Information System",
+description : "This project is designed to create a stronger information system that will improve care quality for children in adversity, as well as provide an electronic mechanism for anonymous feedback relating to care conditions and issues with local authorities.",
+grantee : [{name:"Children In Families",link:"http://www.childreninfamilies.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"Rotati Consulting",link:"http://www.rotati.com/"}],
+technology_solution : "Open-source case management system for child care program",
+direct_beneficiaries : "242",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "Tpp9YacGLefSwXPDt",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Youth Coalition Online Engagement Platform",
+description : "The project funds the development of an online platform which allows youth to discuss youth issues and get them to agree on common ground for solutions while allowing them to share the issues and solutions to all stakeholders. Through this, youth voices are strongly joined for advocating for what they actually demand from main actors, especially the government.",
+grantee : [{name:"YCUD",link:"http://www.ycud.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"BizSolution",link:"http://www.bizsolution.biz/"}],
+technology_solution : "Online youth debate platform for provincial participants of Mock Youth Parliament.",
+direct_beneficiaries : "",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "Tpp9YacGLefSwXPDt",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Think Global Make Local",
+description : "This project will create a cohort of young Cambodian product designers and entrepreneurs with the confidence and ability to take their ideas from concept to market. After the training, the students will have built quality product prototypes in 3D and CAD design and have the confidence to become design entrepreneurs.",
+grantee : [{name:"ARC Hub PNH",link:"http://www.archubpnh.com/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"ARC Hub PNH",link:"http://www.archubpnh.com/"}],
+technology_solution : "New product design & product development course",
+direct_beneficiaries : "30",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "RLtjDev7ZhvxNZgPy",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Leveraging Mobile ICT to Professionalize Rural Cambodian Sanitation Market",
+description : "This project will test a digital tool to help improve the efficiency of service delivery for the rural sanitation supply chain for WASH product suppliers (toilets, pipes, latrines, concrete, etc.). The app will centralize outreach planning, inventory management, invoice and payment tracking, income and expenditure summary and outstanding delivery schedule and location information for toilet sales and distribution.",
+grantee : [{name:"WaterSHED",link:"http://www.watershedasia.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"CamMob",link:"http://www.cam-mob.com/"}],
+technology_solution : "Supply chain management system for WASH product suppliers.",
+direct_beneficiaries : "961",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "RLtjDev7ZhvxNZgPy",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Digital Technology for Financial Empowerment",
+description : "This project aims to test whether a consumer awareness campaign, delivered via Facebook and targeted at Cambodia’s youth, can be effective in stimulating dialogue within poor Cambodian households on financial decision making and ultimately contribute to building financial awareness and consumer confidence.",
+grantee : [{name:"World Education, Inc.",link:"http://cambodia.worlded.org/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}, {name:"Good Return",link:"https://goodreturn.org.au/"}],
+technical_providers : [{name:"Good Return",link:"https://goodreturn.org.au"}],
+technology_solution : "Content development & consumer awareness campaign via Facebook",
+direct_beneficiaries : "",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "RLtjDev7ZhvxNZgPy",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Promoting Dialogue through Online Radio",
+description : "This project aims to empower Prey Lang communities to tell their stories through community-based media production activities, and BPO will collect these stories and create content from people from five communes to broadcast online. Ultimately, these stories will help raise awareness about citizens' issues in Prey Lang at the local and national level through social media and online radio.",
+grantee : [{name:"Buddhism for Peace Organization (BPO)"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"Buddhism for Peace Organization (BPO)"}],
+technology_solution : "Community-based media production & content development. Awareness campaign via online radio and social media.",
+direct_beneficiaries : "",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "RLtjDev7ZhvxNZgPy",
+status:1
+});
+
+db.projects.insert({
+_id:(new ObjectId).str,
+title : "Social Enterprise Cambodia",
+description : "This project aims to develop a website that will serve as an online directory of social enterprises and information resource for developing social enterprises in Cambodia. The website will provide practical resources and information about social entrepreneurship, highlight and promote innovative solutions to social/ environmental problems, and provide a directory of social enterprises for potential investors and donors.",
+grantee : [{name:"Impact Hub PP",link:"http://phnompenh.impacthub.net/"}],
+partners : [{name:"USAID Cambodia",link:"https://www.usaid.gov/cambodia"}],
+technical_providers : [{name:"inoover Digital Solution Lab",link:"http://inoover.com/"}],
+technology_solution : "Online directory, relevant tools & resources on social entrepreneurship.",
+direct_beneficiaries : "",
+createdAt : new Date(),
+updateAt : "",
+phaseId: "RLtjDev7ZhvxNZgPy",
+status:1
+});
