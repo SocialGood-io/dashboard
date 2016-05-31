@@ -3,5 +3,7 @@ Meteor.publish('projects', function(){
 });
 
 Meteor.publish('projectPhases', function(){
-	return ProjectPhases.find({});
+  return ProjectPhases.find({}, {
+    sort: {'status': 1}
+  });
 });
