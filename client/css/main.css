@@ -187,11 +187,44 @@ a.prj-tags{
     text-decoration: none;
     text-transform: capitalize;
     margin-right: 5px;
+    margin-top: 5px;
     border: 1px solid #dadada;
     display:inline-block;
 }
 a:hover.prj-tags{
   color:#446cb3;
+}
+a.admin-prj-tags{
+  background: #f1f1f1;
+  padding: 5px;
+  color: #3e3c3c;
+  /* border-radius: 3px; */
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-right: 5px;
+  margin-top: 5px;
+  border: 1px solid #dadada;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+a#log-out {
+    float: right;
+}
+
+.top-box {
+  border: 1px solid #dadada;
+  padding: 15px;
 }
 
 /* ==========================================================================

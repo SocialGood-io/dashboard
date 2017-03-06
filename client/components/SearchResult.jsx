@@ -3,14 +3,13 @@ SearchResult=React.createClass({
 	getMeteorData: function(){
   	handle = Meteor.subscribe("projects");
   	var data = {
-  		projectsLoaded: FlowRouter.subsReady(),
-  		currentPhase: this.props.currentPhase ? this.props.currentPhase :''
+  		projectsLoaded: FlowRouter.subsReady()
   	};
   	// console.log(data.projectsLoaded, "******* >>>>>", data.currentPhase)
   	if (data.projectsLoaded) {
 			let phasesData = ProjectPhases.find().fetch();
 			let phases =	_.indexBy(phasesData,'_id');
-			if(data.currentPhase){
+			/*if(data.currentPhase){
 				// console.log("phase -", data.currentPhase)
 				let pid=_.find(phases, function(phase) {
 					// console.log("SearchResult :: phase -->>", phase)
@@ -19,10 +18,10 @@ SearchResult=React.createClass({
 				})
 				// console.log("SearchResult :: pid  -->>", pid);
 				filteredProjects = Projects.find({phaseId:pid._id, tags: {$in: [this.props.tag]}}).fetch();
-			}else{
+			}else{*/
 				// console.log("phase -", this.props.currentPhase)
 				filteredProjects = Projects.find({tags: {$in: [this.props.tag]}}).fetch();
-			}
+			// }
 			return{
 	  		phases: phases,
 				filteredProjects: filteredProjects,
@@ -44,7 +43,6 @@ SearchResult=React.createClass({
 	render: function(){
 		that = this;
 		// console.log("========", this)
-		// console.log(this.data.filteredProjects,"++++++++++++++")
 		return (
 			<div>
 				{
@@ -58,9 +56,11 @@ SearchResult=React.createClass({
 										<h2>{project.title}</h2>
 										<p>{project.description}</p>
 										{
-											project.tags.map((tag, index)=>{
-												return <a href="javascript:void(0)" key={index} className="prj-tags" onClick={()=>that.searchData(tag)}>{tag}</a>
-											})
+											project && project.tags ?
+												project.tags.map((tag, index)=>{
+													return <a href="javascript:void(0)" key={index} className="prj-tags" onClick={()=>that.searchData(tag)}>{tag}</a>
+												})
+											:''
 										}
 									</div>
 									<div className="data left">

@@ -1,4 +1,8 @@
 ProjectsLayout = React.createClass({
+	// adminRedirect(event){
+	// 	event.preventDefault();
+	// 	FlowRouter.go("/login");
+	// },
 	render(){
 		return(
 			<div>
@@ -13,7 +17,7 @@ ProjectsLayout = React.createClass({
 					<h1>Development Innovations Dashboard</h1>
 					<p className="large">We are helping civil society organizations in Cambodia test, design, and implement technology solutions that solve development challenges. <a href="/">Explore our projects</a> or <a href="http://development-innovations.org/contact-us">get involved with us.</a></p>
 
-					<ProjectPhasesList />
+					<TagsList />
 					
 					<div className="clear"></div>
 					

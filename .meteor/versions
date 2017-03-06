@@ -1,5 +1,6 @@
 accounts-base@1.2.2
 accounts-password@1.1.4
+alanning:roles@1.2.16
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -28,6 +29,7 @@ ejson@1.0.7
 email@1.0.8
 es5-shim@4.1.14
 fastclick@1.0.7
+fortawesome:fontawesome@4.7.0
 geojson-utils@1.0.4
 hot-code-push@1.0.0
 html-tools@1.0.5
@@ -80,6 +82,7 @@ standard-minifiers@1.0.2
 templating@1.1.5
 templating-tools@1.0.0
 tracker@1.0.9
+twbs:bootstrap@3.3.6
 ui@1.0.8
 underscore@1.0.4
 url@1.0.5

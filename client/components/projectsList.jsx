@@ -6,23 +6,23 @@ ProjectsList=React.createClass({
 			phases: "",
 			projects: "",
 			projectsLoaded: FlowRouter.subsReady(),
-			currentPhase:this.props.phaseAlias?this.props.phaseAlias:""
+			tag: FlowRouter.current().params.alias ? FlowRouter.current().params.alias :''
 		};
 
 		if (data.projectsLoaded) {
 			let phasesData = ProjectPhases.find().fetch();
 			data.phases =	_.indexBy(phasesData,'_id');
 			// console.log("projects list :: currentPhase =>>", data.currentPhase)
-			if(data.currentPhase){
+			/*if(data.currentPhase){
 				let pid=_.find(data.phases, function(phase) {
 					// console.log("project list :: phase -->>", phase)
 					return phase.alias == data.currentPhase
 				})
 				// console.log("project list :: pid  -->>", pid);
 				data.projects = Projects.find({phaseId:pid._id}).fetch()
-			}else{
+			}else{*/
 				data.projects = Projects.find().fetch()
-			}
+			// }
 		}
 		// console.log("projects list :: Data =>>", data);
 		return data;
@@ -32,6 +32,9 @@ ProjectsList=React.createClass({
   		filter: 0,
   		tagValue: ""
   	}
+	},
+	componentWillReceiveProps(){
+		this.searchTags(FlowRouter.current().params.alias ? FlowRouter.current().params.alias :'')
 	},
 	getItems:function(items){
 		// console.log("project list :: items -->>", items)
@@ -54,14 +57,16 @@ ProjectsList=React.createClass({
 			return <div />;
 		}
 		that = this;
-		// console.log("-------", this.state.tagValue)
+		// console.log("---------------------------", this.props.tagValue)
+		// console.log("===========================", this.state.tagValue)
 		// console.log("projects list :: projects array -->>", this.data.projects)
+		// console.log("-------------", this.data.tag)
 		return (
 			<div>
 				{
 					this.state.filter == 0 ?
 						this.data.projects.map(function(project){
-							// console.log("project list :: projects data =>>", project)
+							// console.log("project list :: projects data =>>", project.tags)
 							return (
 								<div key={project._id}>
 									<div className="clear"></div>
@@ -69,10 +74,12 @@ ProjectsList=React.createClass({
 										<div className="about left">
 											<h2>{project.title}</h2>
 											<p>{project.description}</p>
-											{
-												project.tags.map((tag, index)=>{
-													return <a href="javascript:void(0)" key={index} className="prj-tags" onClick={()=>that.searchTags(tag)}>{tag}</a>
-												})
+											{	
+												project && project.tags ?
+													project.tags.map((tag, index)=>{
+														return <a href="javascript:void(0)" key={index} className="prj-tags" onClick={()=>that.searchTags(tag)}>{tag}</a>
+													})
+												:''
 											}
 										</div>
 										<div className="data left">
