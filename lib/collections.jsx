@@ -8,6 +8,9 @@ if(Meteor.isServer){
 		},
 		'addProject': function(projectInfo){
 			Projects.insert(projectInfo)
+		},
+		'updateProject': function(projectInfo, projectId){
+			Projects.update({_id: projectId}, {$set:projectInfo})
 		}
 	})
 }

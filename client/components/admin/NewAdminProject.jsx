@@ -12,6 +12,12 @@ NewAdminProject = React.createClass({
 		return data;
 	},
 	componentDidMount(){
+		//initialize tags input
+
+		/*$('#tags').tagsinput({
+			trimValue: true
+		});*/
+
 		// console.log("componentDidMount called");
 		$('.grantee-info, .partner-info, .tech-provider-info').on('click', '.add-item', function(e) {
 			// console.log("add item button clicked");
@@ -45,11 +51,12 @@ NewAdminProject = React.createClass({
 			description: this.refs.description.value,
 			technology_solution: this.refs.technology_solution.value,
 			direct_beneficiaries: this.refs.direct_beneficiaries.value,
-			tags: this.refs.tags.value,
+			tags: this.refs.tags.value.split(","),
 			phaseId: this.refs.phases.value,
 			grantee:[],
 			partners:[],
-			technical_providers:[]
+			technical_providers:[],
+			createdAt : new Date()
 		}
 		if (!e.currentTarget.granteename.length) {
       project_data.grantee.push({
@@ -103,19 +110,23 @@ NewAdminProject = React.createClass({
       }
   	}
 		// console.log("==========", project_data)
-		Meteor.call('addProject', project_data, function(err, res) {
-      if (err){
-        console.log("====", err);
-      }else{
-      	// console.log("Project added successfully");
-      	alert("Project added successfully")
-        FlowRouter.go('/ProjectsList');
-      }
-  	});
+		if(project_data.phaseId != ""){
+			Meteor.call('addProject', project_data, function(err) {
+	      if (err){
+	        Bert.alert('Error while adding project:- ' + err.reason , 'danger', 'growl-top-right');
+	      }else{
+	      	// console.log("Project added successfully");
+	      	Bert.alert('Project added successfully.', 'success', 'growl-top-right' );
+	        FlowRouter.go('/ProjectsList');
+	      }
+	  	});
+	  }else{
+	  	Bert.alert('Please select any one phase', 'danger', 'growl-top-right');
+	  }
 	},
 	render(){
 		if (!this.data.projectsLoaded) {
-			return <div>Loading...</div>;
+			return <div />;
 		}
 		that = this;
 		// console.log(this.data,"------------------")
@@ -137,11 +148,11 @@ NewAdminProject = React.createClass({
 					</div>
 					<div className="form-group">
 						<label>Enter Direct Beneficiaries :</label>
-						<input className="form-control" type="text" ref="direct_beneficiaries" placeholder="Enter direct beneficiaries" required /><br/>
+						<input className="form-control" type="number" min="0" ref="direct_beneficiaries" placeholder="Enter direct beneficiaries" required /><br/>
 					</div>
 					<div className="form-group">
 						<label>Enter Tags :</label>
-						<input className="form-control" type="text" ref="tags" placeholder="Enter tags" /><br/>
+						<input className="form-control" type="text" id="tags" ref="tags" data-role="tagsinput" placeholder="Enter tags" /><br/>
 					</div>
 					<div className="form-group">
 						<label>Select Phases :</label>
@@ -176,11 +187,11 @@ NewAdminProject = React.createClass({
                       <div className="panel-body">
                         <div className="form-group" data-required="true">
                           <label>Name</label>
-                          <input name="granteename" required="" className="form-control granteename" type="text" />
+                          <input name="granteename" required className="form-control granteename" type="text" />
                         </div>
                         <div className="form-group" data-required="true">
                           <label>Link</label>
-                          <input name="granteelink" required="" className="form-control granteelink" type="text" />
+                          <input name="granteelink" required className="form-control granteelink" type="text" />
                         </div>
                       </div>
                   	</div>
@@ -260,7 +271,7 @@ NewAdminProject = React.createClass({
 					</div>
 
 					<div className="form-group">
-						<button className="btn btn-default" type="submit">Create Project</button>&nbsp;
+						<button className="btn btn-default" type="submit">Create</button>&nbsp;
 						<button className="btn btn-default" type="button" onClick={()=>FlowRouter.go("/ProjectsList")}>Back</button>
 					</div>
 				</form>

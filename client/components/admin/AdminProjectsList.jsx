@@ -3,11 +3,13 @@ AdminProjectsList = React.createClass({
 		// console.log(this.props.project._id)
 		Meteor.call('deleteProject', this.props.project._id, (err) =>{
 			if(err)
-				alert("Error while deleting projects :- "+err.reason)
+				Bert.alert('Error while deleting projects :- ' + err.reason , 'danger', 'growl-top-right');
 			else
-				alert("Project deleted successfully");
+				Bert.alert('Project deleted successfully.', 'success', 'growl-top-right' );
 		})
 	},
+	/*updateProjects(){
+	},*/
 	render(){
 		return(
 			<tr key={this.props.project._id}>
@@ -41,7 +43,7 @@ AdminProjectsList = React.createClass({
 						:''
 					}
 				</td>
-				<td>
+				<td className="tags">
 					{
 						this.props.project && this.props.project.tags ?
 							this.props.project.tags.map((tag, index)=>{
@@ -65,7 +67,7 @@ AdminProjectsList = React.createClass({
 					}
 				</td>
 				<td>{this.props.project && this.props.project.createdAt ? this.props.project.createdAt.toString() :''}</td>
-				<td><a href="" style={{textDecoration: "none"}}><i className="fa fa-edit" aria-hidden="true"></i></a>&nbsp;<a href="" style={{textDecoration: "none"}} onClick={this.deleteProjects}><i className="fa fa-trash" aria-hidden="true"></i></a></td>
+				<td><a href={FlowRouter.path('adminUpdateProject',{id:this.props.project._id})} style={{textDecoration: "none"}}><i className="fa fa-edit" aria-hidden="true"></i></a>&nbsp;<a href="" style={{textDecoration: "none"}} onClick={this.deleteProjects}><i className="fa fa-trash" aria-hidden="true"></i></a></td>
 			</tr>
 		);
 	}

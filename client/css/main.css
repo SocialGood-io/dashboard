@@ -202,9 +202,9 @@ a.admin-prj-tags{
   font-size: 12px;
   text-decoration: none;
   text-transform: capitalize;
-  margin-right: 5px;
-  margin-top: 5px;
   border: 1px solid #dadada;
+  display: inline-block;
+  margin: 0 3px 5px 3px;
 }
 
 table {

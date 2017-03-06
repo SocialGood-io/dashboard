@@ -30,7 +30,8 @@ AdminProjectsTable = React.createClass({
 			return <div>Loading...</div>;
 		}
 		return(
-			<div>
+			<div className="container">
+				<h1>Admin Dashboard:- Projects List</h1>
 				<div className="top-box">
 					<a id="new-project" href="" style={{textDecoration: "none"}} onClick={()=>FlowRouter.go('/NewProject')}>New Project</a>
 					<a id="log-out" href="" style={{textDecoration: "none"}} onClick={this.logOut}>Log out</a>

@@ -1,4 +1,4 @@
-FlowRouter.route("/", {
+/*FlowRouter.route("/", {
 	name: "home",
 	subscriptions: function(params){
 		this.register('projectPhases',Meteor.subscribe('projectPhases'))
@@ -22,7 +22,7 @@ FlowRouter.route('/:alias', {
 			content: <ProjectsList tagValue={params.alias} />
 		});
 	}
-});
+});*/
 
 /*var adminRoutes = FlowRouter.group({
   prefix: '/admin',
@@ -72,5 +72,19 @@ FlowRouter.route('/NewProject', {
 	},
   triggersEnter: [function(context, redirect) {
     console.log('running /NewProject admin trigger');
+  }]
+});
+
+FlowRouter.route('/UpdateProject/:id', {
+	name: 'adminUpdateProject',
+	subscriptions: function(params){
+    this.register('projectPhases',Meteor.subscribe('projectPhases'))
+		this.register('projects',Meteor.subscribe('projects'))
+	},
+	action(params) {
+		ReactLayout.render(AdminLayout, {adminPages: <UpdateAdminProject projectId={params.id}/>});
+	},
+  triggersEnter: [function(context, redirect) {
+    console.log('running /UpdateProject admin trigger');
   }]
 });
