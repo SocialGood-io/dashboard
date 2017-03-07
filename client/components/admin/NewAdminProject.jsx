@@ -14,10 +14,12 @@ NewAdminProject = React.createClass({
 	componentDidMount(){
 		//initialize tags input
 
-		/*$('#tags').tagsinput({
-			trimValue: true
-		});*/
+		$('#tags-input').tagsinput({
+			maxChars: 50
+		});
 
+		$('.bootstrap-tagsinput').css('display','block');
+		
 		// console.log("componentDidMount called");
 		$('.grantee-info, .partner-info, .tech-provider-info').on('click', '.add-item', function(e) {
 			// console.log("add item button clicked");
@@ -33,12 +35,7 @@ NewAdminProject = React.createClass({
 			e.preventDefault();
 			var childs = $(this).parents('.grantee, .partner, .tech-provider').parent().children('.grantee, .partner, .tech-provider').length;
 			if (childs > 1){
-				try{
-					$(this).parents('.grantee, .partner, .tech-provider').remove();
-				}
-				catch(e){
-					// console.log("--------------", e)
-				}
+				$(this).parents('.grantee, .partner, .tech-provider').remove();
 			}
 			else $(this).parents('.grantee, .partner, .tech-provider').find('input').val('');
 			return false;
@@ -46,12 +43,14 @@ NewAdminProject = React.createClass({
 	},
 	createNewProject(e){
 		e.preventDefault();
+		var tags = $("#tags-input").tagsinput('items')
+		// console.log("----------", tags);
 		var project_data = {
 			title: this.refs.title.value,
 			description: this.refs.description.value,
 			technology_solution: this.refs.technology_solution.value,
 			direct_beneficiaries: this.refs.direct_beneficiaries.value,
-			tags: this.refs.tags.value.split(","),
+			tags: tags,
 			phaseId: this.refs.phases.value,
 			grantee:[],
 			partners:[],
@@ -150,9 +149,9 @@ NewAdminProject = React.createClass({
 						<label>Enter Direct Beneficiaries :</label>
 						<input className="form-control" type="number" min="0" ref="direct_beneficiaries" placeholder="Enter direct beneficiaries" required /><br/>
 					</div>
-					<div className="form-group">
+					<div className="form-group tag-input">
 						<label>Enter Tags :</label>
-						<input className="form-control" type="text" id="tags" ref="tags" data-role="tagsinput" placeholder="Enter tags" /><br/>
+						<input type="text" id="tags-input" data-role="tagsinput" placeholder="Enter tags" /><br/>
 					</div>
 					<div className="form-group">
 						<label>Select Phases :</label>

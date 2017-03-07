@@ -226,6 +226,16 @@ a#log-out {
   background: #CACFD2;
 }
 
+// css for override bootstrap tags input 
+
+.bootstrap-tagsinput {
+  display: block !important;
+}
+
+.tag {
+  margin: 0px;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

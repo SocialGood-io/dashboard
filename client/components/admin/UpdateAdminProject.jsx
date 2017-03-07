@@ -16,9 +16,11 @@ UpdateAdminProject = React.createClass({
 	componentDidMount(){
 		//initialize tags input
 
-		/*$('#tags').tagsinput({
-			trimValue: true
-		});*/
+		$('#tags-input').tagsinput({
+			maxChars: 50
+		});
+
+		$('.bootstrap-tagsinput').css('display','block');
 
 		// console.log("componentDidMount called");
 		$('.grantee-info, .partner-info, .tech-provider-info').on('click', '.add-item', function(e) {
@@ -48,12 +50,13 @@ UpdateAdminProject = React.createClass({
 	},
 	updateProject(e){
 		e.preventDefault();
+		var tags = $("#tags-input").tagsinput('items')
 		var project_data = {
 			title: this.refs.title.value,
 			description: this.refs.description.value,
 			technology_solution: this.refs.technology_solution.value,
 			direct_beneficiaries: this.refs.direct_beneficiaries.value,
-			tags: this.refs.tags.value.split(","),
+			tags: tags,
 			phaseId: this.refs.phases.value,
 			grantee:[],
 			partners:[],
@@ -157,7 +160,7 @@ UpdateAdminProject = React.createClass({
 					</div>
 					<div className="form-group">
 						<label>Enter Tags :</label>
-						<input className="form-control" type="text" id="tags" ref="tags" defaultValue={this.data.projects.tags} /><br/>
+						<input className="form-control" type="text" id="tags-input" data-role="tagsinput" defaultValue={this.data.projects.tags} /><br/>
 					</div>
 					<div className="form-group">
 						<label>Select Phases :</label>
