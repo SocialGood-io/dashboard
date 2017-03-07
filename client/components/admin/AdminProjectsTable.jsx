@@ -30,7 +30,7 @@ AdminProjectsTable = React.createClass({
 			return <div>Loading...</div>;
 		}
 		return(
-			<div className="container">
+			<div className="container-fluid">
 				<h1>Admin Dashboard:- Projects List</h1>
 				<div className="top-box">
 					<a id="new-project" href="" style={{textDecoration: "none"}} onClick={()=>FlowRouter.go('/NewProject')}>New Project</a>
@@ -39,33 +39,33 @@ AdminProjectsTable = React.createClass({
 				<br/>
 				{
 					this.data.projectCount > 0 ?
-						<div style={{overFlowX:"auto"}}>
-						<table style={{width: '100%'}}>
-							<thead>
-								<tr>
-									<th>Title</th>
-									<th>Direct Beneficiaries</th>
-									<th>Grantee</th>
-									<th>Partners</th>
-									<th>Tags</th>
-									<th>Technical Providers</th>
-									<th>Created Date</th>
-									<th>Options</th>
-								</tr>
-							</thead>
-							<tbody>
-								{
-									this.data.projects ?
-										this.data.projects.map((project) =>{
-											// console.log(project.grantee)
-											return(
-												<AdminProjectsList key={project._id} project={project} />
-											);
-										})
-									:''
-								}
-							</tbody>
-						</table>
+						<div className="table-responsive">
+							<table style={{width: '100%'}} className="table table-bordered table-striped custom-table">
+								<thead>
+									<tr>
+										<th>Title</th>
+										<th>Direct Beneficiaries</th>
+										<th>Grantee</th>
+										<th>Partners</th>
+										<th>Tags</th>
+										<th>Technical Providers</th>
+										<th>Created Date</th>
+										<th>Options</th>
+									</tr>
+								</thead>
+								<tbody>
+									{
+										this.data.projects ?
+											this.data.projects.map((project) =>{
+												// console.log(project.grantee)
+												return(
+													<AdminProjectsList key={project._id} project={project} />
+												);
+											})
+										:''
+									}
+								</tbody>
+							</table>
 						</div>
 					: <div>No projects to shown.</div>
 				}

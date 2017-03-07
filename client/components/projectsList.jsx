@@ -33,9 +33,6 @@ ProjectsList=React.createClass({
   		tagValue: ""
   	}
 	},
-	componentWillReceiveProps(){
-		this.searchTags(FlowRouter.current().params.alias ? FlowRouter.current().params.alias :'')
-	},
 	getItems:function(items){
 		// console.log("project list :: items -->>", items)
 		let itemsLength = items.length - 1;
@@ -46,28 +43,40 @@ ProjectsList=React.createClass({
 		)
 	},
 	searchTags: function(tag){
-		// console.log("searchTags() called ==>", tag);
 		this.setState({
 			"filter": 1,
 			"tagValue": tag
+		});
+	},
+	resetState(){
+		this.setState({
+			"filter": 0,
+			"tagValue": ""
 		});
 	},
 	render: function () {
 		if (!this.data.projectsLoaded) {
 			return <div />;
 		}
-		that = this;
 		// console.log("---------------------------", this.props.tagValue)
 		// console.log("===========================", this.state.tagValue)
-		// console.log("-----------", this.data)
+		// console.log("-----------", that.searchTags)
 		return (
 			<div>
 				<p className="large">We are helping civil society organizations in Cambodia test, design, and implement technology solutions that solve development challenges. <a href="/">Explore our projects</a> or <a href="http://development-innovations.org/contact-us">get involved with us.</a></p>
 
-				<TagsList searchTag={this.searchTags} tag={this.state.tagValue?this.state.tagValue:''} />
+				<TagsList searchTag={this.searchTags} filter={this.state.filter ? this.state.filter:0} />
+				<br/>
+				<br/>
+				{
+					this.state.filter == 1 ?
+						<button className="btn btn-default" type="button" onClick={this.resetState}>List all</button>
+					:''
+				}
+
 				{
 					this.state.filter == 0 ?
-						this.data.projects.map(function(project){
+						this.data.projects.map((project)=>{
 							// console.log("project list :: projects data =>>", project)
 							return (
 								<div key={project._id}>
@@ -76,20 +85,20 @@ ProjectsList=React.createClass({
 										<div className="about left">
 											<h2>{project.title}</h2>
 											<p>{project.description}</p>
-											{	
+											{
 												project && project.tags ?
 													project.tags.map((tag, index)=>{
-														return <a href="javascript:void(0)" key={index} className="prj-tags" onClick={()=>that.searchTags(tag)}>{tag}</a>
+														return <a href="javascript:void(0)" key={index} className="prj-tags" id={project._id} onClick={()=>this.searchTags(tag)}>{tag}</a>
 													})
 												:''
 											}
 										</div>
 										<div className="data left">
-											<span className={"tag "+that.data.phases[project.phaseId].dashboxclass+" right"}>{that.data.phases[project.phaseId].title}</span>
+											<span className={"tag "+this.data.phases[project.phaseId].dashboxclass+" right"}>{this.data.phases[project.phaseId].title}</span>
 											<ul>
-												<li><strong>Grantee: </strong>{that.getItems(project.grantee)}</li>
-												<li><strong>Partners: </strong>{that.getItems(project.partners)}</li>
-												<li><strong>Technical Providers: </strong>{that.getItems(project.technical_providers)}</li>
+												<li><strong>Grantee: </strong>{this.getItems(project.grantee)}</li>
+												<li><strong>Partners: </strong>{this.getItems(project.partners)}</li>
+												<li><strong>Technical Providers: </strong>{this.getItems(project.technical_providers)}</li>
 												<li><strong>Technology Solution: </strong>{project.technology_solution}</li>
 												<li><strong>Direct Beneficiaries: </strong>{project.direct_beneficiaries}</li>
 											</ul>
@@ -102,7 +111,7 @@ ProjectsList=React.createClass({
 				}
 				{
 					this.state.filter == 1 ?
-						<SearchResult tag={this.state.tagValue?this.state.tagValue:''} searchTag={this.searchTags} currentPhase={this.props.phaseAlias?this.props.phaseAlias:''} />
+						<SearchResult tag={this.state.tagValue?this.state.tagValue:''} searchTag={this.searchTags} />
 					:''
 				}
 			</div>

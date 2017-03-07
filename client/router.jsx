@@ -44,7 +44,7 @@ FlowRouter.route('/login', {
 		ReactLayout.render(AdminLayout, {adminPages: <AdminLogin />});
 	},
   triggersEnter: [function(context, redirect) {
-    console.log('running / admin trigger');
+    // console.log('running / admin trigger');
   }]
 });
 
@@ -58,7 +58,7 @@ FlowRouter.route('/ProjectsList', {
 		ReactLayout.render(AdminLayout, {adminPages: <AdminProjectsTable />});
 	},
   triggersEnter: [function(context, redirect) {
-    console.log('running /ProjectsList admin trigger');
+    // console.log('running /ProjectsList admin trigger');
   }]
 });
 
@@ -71,7 +71,7 @@ FlowRouter.route('/NewProject', {
 		ReactLayout.render(AdminLayout, {adminPages: <NewAdminProject />});
 	},
   triggersEnter: [function(context, redirect) {
-    console.log('running /NewProject admin trigger');
+    // console.log('running /NewProject admin trigger');
   }]
 });
 
@@ -85,6 +85,6 @@ FlowRouter.route('/UpdateProject/:id', {
 		ReactLayout.render(AdminLayout, {adminPages: <UpdateAdminProject projectId={params.id}/>});
 	},
   triggersEnter: [function(context, redirect) {
-    console.log('running /UpdateProject admin trigger');
+    // console.log('running /UpdateProject admin trigger');
   }]
 });

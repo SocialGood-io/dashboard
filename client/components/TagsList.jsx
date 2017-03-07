@@ -13,20 +13,8 @@ TagsList = React.createClass({
 		}*/
 		return data;
 	},
-	getInitialState:function(){
-  	return{
-  		// filter:0,
-  		tagName: "",
-  		// "showTagArea": false
-  	}
-	},
-	filterTag(tag) {
-		this.setState({
-			// filter: 1,
-			"tagName": tag
-		});
-	},
-	searchData: function(tag){
+	searchData: function(tag, index){
+		$('#tags-'+index).addClass('active').siblings().removeClass('active');
 		this.props.searchTag(tag);
 	},
 	/*getProjectCount: function(phaseId){
@@ -35,7 +23,11 @@ TagsList = React.createClass({
 		else
 			return 0;
 	},*/
-
+	componentDidUpdate(){
+		if(this.props.filter == 0){
+			$('.prj-tags').removeClass('active');
+		}
+	},
 	showFilterTags(){
 		var tempArray = [];
 		// console.log("---------", this.data.projects)
@@ -46,25 +38,24 @@ TagsList = React.createClass({
 			:''
 			// console.log("==>", _.flatten(tempArray))
 		}
-		var uniqValArray = _.uniq(_.flatten(tempArray))
-		// console.log(uniqValArray)
+		var uniqValArray = _.uniq(_.flatten(tempArray)).sort();
+		// console.log("========", uniqValArray)
 		return uniqValArray.map((tag, index)=>{
 			// console.log("tag --", tag)
 			return (
-				<a href="javascript:void(0)" key={index} className="prj-tags" onClick={()=>that.searchData(tag)}>{tag}</a>
+				<a href="javascript:void(0)" key={index} className="prj-tags" id={"tags-"+index} onClick={()=>this.searchData(tag, index)}>{tag}</a>
 			)
 		})
 	},
-
 	render: function () {
 		if (!this.data.projectsLoaded) {
 			return <LoadingSpinner />;
 		}
-		that = this;
+		// console.log("------", this.props.filter)
 		return (
 			<div className="tag-section">
 				{
-					that.showFilterTags()
+					this.showFilterTags()
 				}
 			</div>
 		)

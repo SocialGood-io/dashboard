@@ -10,4 +10,4 @@ Meteor.startup(function () {
 		});
 		Roles.addUsersToRoles(id,['admin'], 'staff');
 	}
-})
+});

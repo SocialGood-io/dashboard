@@ -41,12 +41,12 @@ SearchResult=React.createClass({
 		this.props.searchTag(tag);
 	},
 	render: function(){
-		that = this;
+		// that = this;
 		// console.log("========", this)
 		return (
 			<div>
 				{
-					this.data.filteredProjects.map(function(project){
+					this.data.filteredProjects.map((project)=>{
 						// console.log(">>>>>>>>>>>>>>", project)
 						return(
 							<div key={project._id}>
@@ -58,17 +58,17 @@ SearchResult=React.createClass({
 										{
 											project && project.tags ?
 												project.tags.map((tag, index)=>{
-													return <a href="javascript:void(0)" key={index} className="prj-tags" onClick={()=>that.searchData(tag)}>{tag}</a>
+													return <a href="javascript:void(0)" key={index} className="prj-tags" onClick={()=>this.searchData(tag)}>{tag}</a>
 												})
 											:''
 										}
 									</div>
 									<div className="data left">
-										<span className={"tag "+that.data.phases[project.phaseId].dashboxclass+" right"}>{that.data.phases[project.phaseId].title}</span>
+										<span className={"tag "+this.data.phases[project.phaseId].dashboxclass+" right"}>{this.data.phases[project.phaseId].title}</span>
 										<ul>
-											<li><strong>Grantee: </strong>{that.getItems(project.grantee)}</li>
-											<li><strong>Partners: </strong>{that.getItems(project.partners)}</li>
-											<li><strong>Technical Providers: </strong>{that.getItems(project.technical_providers)}</li>
+											<li><strong>Grantee: </strong>{this.getItems(project.grantee)}</li>
+											<li><strong>Partners: </strong>{this.getItems(project.partners)}</li>
+											<li><strong>Technical Providers: </strong>{this.getItems(project.technical_providers)}</li>
 											<li><strong>Technology Solution: </strong>{project.technology_solution}</li>
 											<li><strong>Direct Beneficiaries: </strong>{project.direct_beneficiaries}</li>
 										</ul>

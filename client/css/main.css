@@ -194,6 +194,10 @@ a.prj-tags{
 a:hover.prj-tags{
   color:#446cb3;
 }
+a.prj-tags.active {
+  background-color: #808080;
+  color: #FFFFFF;
+}
 a.admin-prj-tags{
   background: #f1f1f1;
   padding: 5px;
@@ -207,16 +211,7 @@ a.admin-prj-tags{
   margin: 0 3px 5px 3px;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
 
 a#log-out {
     float: right;
@@ -225,6 +220,10 @@ a#log-out {
 .top-box {
   border: 1px solid #dadada;
   padding: 15px;
+}
+
+.custom-table thead{
+  background: #CACFD2;
 }
 
 /* ==========================================================================
