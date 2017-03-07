@@ -59,14 +59,13 @@ ProjectsList=React.createClass({
 		that = this;
 		// console.log("---------------------------", this.props.tagValue)
 		// console.log("===========================", this.state.tagValue)
-		// console.log("projects list :: projects array -->>", this.data.projects)
-		// console.log("-------------", this.data.tag)
+		// console.log("-----------", this.data)
 		return (
 			<div>
 				{
 					this.state.filter == 0 ?
 						this.data.projects.map(function(project){
-							// console.log("project list :: projects data =>>", project.tags)
+							// console.log("project list :: projects data =>>", project)
 							return (
 								<div key={project._id}>
 									<div className="clear"></div>

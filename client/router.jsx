@@ -1,4 +1,4 @@
-/*FlowRouter.route("/", {
+FlowRouter.route("/", {
 	name: "home",
 	subscriptions: function(params){
 		this.register('projectPhases',Meteor.subscribe('projectPhases'))
@@ -22,7 +22,7 @@ FlowRouter.route('/:alias', {
 			content: <ProjectsList tagValue={params.alias} />
 		});
 	}
-});*/
+});
 
 /*var adminRoutes = FlowRouter.group({
   prefix: '/admin',
@@ -30,7 +30,7 @@ FlowRouter.route('/:alias', {
   triggersEnter: [function(context, redirect) {
     if(!Meteor.userId()) {
       redirect('home');
-    } 
+    }
     if(!Meteor.user().roles && !Meteor.user().roles.staff == 'admin') {
       redirect('home');
     }
@@ -38,7 +38,7 @@ FlowRouter.route('/:alias', {
   }]
 });*/
 
-/*FlowRouter.route('/', {
+FlowRouter.route('/login', {
 	name: 'adminLogin',
 	action() {
 		ReactLayout.render(AdminLayout, {adminPages: <AdminLogin />});
@@ -46,7 +46,7 @@ FlowRouter.route('/:alias', {
   triggersEnter: [function(context, redirect) {
     console.log('running / admin trigger');
   }]
-});*/
+});
 
 FlowRouter.route('/ProjectsList', {
 	name: 'adminProjectsList',
