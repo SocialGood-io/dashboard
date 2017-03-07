@@ -62,6 +62,9 @@ ProjectsList=React.createClass({
 		// console.log("-----------", this.data)
 		return (
 			<div>
+				<p className="large">We are helping civil society organizations in Cambodia test, design, and implement technology solutions that solve development challenges. <a href="/">Explore our projects</a> or <a href="http://development-innovations.org/contact-us">get involved with us.</a></p>
+
+				<TagsList searchTag={this.searchTags} tag={this.state.tagValue?this.state.tagValue:''} />
 				{
 					this.state.filter == 0 ?
 						this.data.projects.map(function(project){

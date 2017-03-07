@@ -26,7 +26,9 @@ TagsList = React.createClass({
 			"tagName": tag
 		});
 	},
-	
+	searchData: function(tag){
+		this.props.searchTag(tag);
+	},
 	/*getProjectCount: function(phaseId){
 		if(this.data.projectCount.hasOwnProperty(phaseId))
 			return (this.data.projectCount[phaseId]).length
@@ -49,7 +51,7 @@ TagsList = React.createClass({
 		return uniqValArray.map((tag, index)=>{
 			// console.log("tag --", tag)
 			return (
-				<a href={FlowRouter.path('tags',{alias:tag})} key={index} className="prj-tags">{tag}</a>
+				<a href="javascript:void(0)" key={index} className="prj-tags" onClick={()=>that.searchData(tag)}>{tag}</a>
 			)
 		})
 	},

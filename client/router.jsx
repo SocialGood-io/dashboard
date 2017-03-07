@@ -11,7 +11,7 @@ FlowRouter.route("/", {
 	}
 });
 
-FlowRouter.route('/:alias', {
+/*FlowRouter.route('/:alias', {
 	name: 'tags',
 	subscriptions: function(params){
     this.register('projectPhases',Meteor.subscribe('projectPhases'))
@@ -22,7 +22,7 @@ FlowRouter.route('/:alias', {
 			content: <ProjectsList tagValue={params.alias} />
 		});
 	}
-});
+});*/
 
 /*var adminRoutes = FlowRouter.group({
   prefix: '/admin',
