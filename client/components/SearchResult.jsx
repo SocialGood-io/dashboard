@@ -64,7 +64,7 @@ SearchResult=React.createClass({
 										}
 									</div>
 									<div className="data left">
-										<span className={"tag "+this.data.phases[project.phaseId].dashboxclass+" right"}>{this.data.phases[project.phaseId].title}</span>
+										<span className={"tags "+this.data.phases[project.phaseId].dashboxclass+" right"}>{this.data.phases[project.phaseId].title}</span>
 										<ul>
 											<li><strong>Grantee: </strong>{this.getItems(project.grantee)}</li>
 											<li><strong>Partners: </strong>{this.getItems(project.partners)}</li>
