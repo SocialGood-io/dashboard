@@ -139,7 +139,7 @@ p {
   padding: 0;
 }
 
-.tag {
+.tags {
   color: #FFF;
   font-size: 90%;
   font-style: italic;
@@ -152,7 +152,7 @@ p {
 }
 .data {
   background: #f1f1f1;
-  margin: 70px 0 20px;
+  margin: 20px 0 20px;
   padding: 10px 20px 10px 20px;
   width: 30%;
 }
@@ -169,8 +169,72 @@ footer {
   margin: 25px 0 0;
 }
 
+.loadingSpan {
+    background: #eff1f1 none repeat scroll 0 0;
+    text-align: center;
+}
+
+/*
+Css for tags
+*/
+
+a.prj-tags{
+  background: #f1f1f1;
+    padding: 5px;
+    color: #3e3c3c;
+    /* border-radius: 3px; */
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-right: 5px;
+    margin-top: 5px;
+    border: 1px solid #dadada;
+    display:inline-block;
+}
+a:hover.prj-tags{
+  color:#446cb3;
+}
+a.prj-tags.active {
+  background-color: #808080;
+  color: #FFFFFF;
+}
+a.admin-prj-tags{
+  background: #f1f1f1;
+  padding: 5px;
+  color: #3e3c3c;
+  /* border-radius: 3px; */
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: 1px solid #dadada;
+  display: inline-block;
+  margin: 0 3px 5px 3px;
+}
 
 
+
+a#log-out {
+    float: right;
+}
+
+.top-box {
+  border: 1px solid #dadada;
+  padding: 15px;
+}
+
+.custom-table thead{
+  background: #CACFD2;
+}
+
+// css for override bootstrap tags input 
+
+.bootstrap-tagsinput {
+  display: block !important;
+}
+
+.tag {
+  margin: 0px;
+}
 
 /* ==========================================================================
    Media Queries
